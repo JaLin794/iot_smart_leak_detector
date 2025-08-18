@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/root/leak_detector_liquid_level_ws/leak_detector/build/CMakeFiles/bootloader"
+		},
+		{
+			"file" : "/root/leak_detector_liquid_level_ws/leak_detector/build/CMakeFiles/bootloader.rule"
+		},
+		{
+			"file" : "/root/leak_detector_liquid_level_ws/leak_detector/build/CMakeFiles/bootloader-complete.rule"
+		},
+		{
+			"file" : "/root/leak_detector_liquid_level_ws/leak_detector/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
+		},
+		{
+			"file" : "/root/leak_detector_liquid_level_ws/leak_detector/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
+		},
+		{
+			"file" : "/root/leak_detector_liquid_level_ws/leak_detector/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
+		},
+		{
+			"file" : "/root/leak_detector_liquid_level_ws/leak_detector/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
+		},
+		{
+			"file" : "/root/leak_detector_liquid_level_ws/leak_detector/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
+		},
+		{
+			"file" : "/root/leak_detector_liquid_level_ws/leak_detector/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
+		},
+		{
+			"file" : "/root/leak_detector_liquid_level_ws/leak_detector/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"bootloader"
+		],
+		"name" : "bootloader"
+	}
+}

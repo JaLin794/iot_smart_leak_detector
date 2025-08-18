@@ -1,0 +1,2 @@
+source /root/leak_detector_liquid_level_ws/leak_detector/build/gdbinit/symbols
+source /root/leak_detector_liquid_level_ws/leak_detector/build/gdbinit/connect
