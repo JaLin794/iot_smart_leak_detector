@@ -1,3 +1,6 @@
+# leak_detector
+IoT Device to Detect Toilet Leaks
+
 # ESP32 Leak Detector with WiFi and MQTT
 
 This project implements a leak detection system using an ESP32 microcontroller that connects to WiFi and publishes sensor data to an MQTT broker.
