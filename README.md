@@ -19,6 +19,12 @@ To increase the battery life of the device, implementation of deep sleep can be 
 Docker image for this project can be found in the Docker Hub: sortdrop/smart_lead_detector
 Link: https://hub.docker.com/r/sortdrop/smart_leak_detector
 
+Docker Command to run docker image
+docker run -it \
+--device=/dev/ttyUSB0 \
+--privileged \
+sortdrop/smart_leak_detector:1.0.0 /bin/bash
+
 # IoT Device
 ## Features
 
