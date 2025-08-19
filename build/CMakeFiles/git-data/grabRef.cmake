@@ -18,7 +18,7 @@ set(HEAD_HASH)
 file(READ "/root/leak_detector_liquid_level_ws/leak_detector/build/CMakeFiles/git-data/HEAD" HEAD_CONTENTS LIMIT 1024)
 
 string(STRIP "${HEAD_CONTENTS}" HEAD_CONTENTS)
-set(GIT_DIR "/root/esp/esp-idf/.git")
+set(GIT_DIR "/root/leak_detector_liquid_level_ws/leak_detector/.git")
 # handle git-worktree
 if(EXISTS "${GIT_DIR}/commondir")
 	file(READ "${GIT_DIR}/commondir" GIT_DIR_NEW LIMIT 1024)

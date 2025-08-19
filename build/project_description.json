@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "leak_detector",
-    "project_version":    "1",
+    "project_version":    "f3777c5-dirty",
     "project_path":       "/root/leak_detector_liquid_level_ws/leak_detector",
     "idf_path":           "/root/esp/esp-idf",
     "build_dir":          "/root/leak_detector_liquid_level_ws/leak_detector/build",

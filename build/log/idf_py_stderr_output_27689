@@ -1,8 +1,0 @@
-Command: cmake -G Ninja -DPYTHON_DEPS_CHECKED=1 -DPYTHON=/root/.espressif/python_env/idf6.0_py3.10_env/bin/python -DESP_PLATFORM=1 -DCCACHE_ENABLE=0 /root/leak_detector_liquid_level_ws/leak_detector
-Configuration Report               
- ───────────────────────────────── 
-   Parser Version: 1               
-   Verbosity: default              
-   Status: Finished successfully   
-                                   
- ───────────────────────────────── 
