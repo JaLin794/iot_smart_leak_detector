@@ -1,5 +1,6 @@
-# leak_detector
-IoT (Internet of Things) Device to Detect Toilet Leaks
+# ESP32 Leak Detector with WiFi and MQTT
+
+This project implements a leak detection system using an ESP32 microcontroller that connects to WiFi via WiFi Provisioning and publishes sensor data to an MQTT broker (HiveMQ Cloud)
 
 # Project Purpose
 The purpose of this project is to learn and create a working code for a device that connects to wifi by collecting the credentials via wifi provisioning and connecting to a MQTT cloud. The device then takes a measurement from a sensor and publishes the values to the MQTT Broker.
@@ -13,10 +14,12 @@ A liquid level sensor did not function very accurately via cyclic tests of dippi
 
 To increase the battery life of the device, implementation of deep sleep can be used to reduce the current draw of the overall device. The logic of this is to collect data samples every few minutes, perform leak detection logic, connect to wifi and upload to MQTT cloud only if leak detection true. To keep the user well aware of the state of the device, periodic wifi connection and uploading to MQTT for status updates can be done. 
 
-# ESP32 Leak Detector with WiFi and MQTT
+# Docker
 
-This project implements a leak detection system using an ESP32 microcontroller that connects to WiFi via WiFi Provisioning and publishes sensor data to an MQTT broker (HiveMQ Cloud)
+Docker image for this project can be found in the Docker Hub: sortdrop/smart_lead_detector
+Link: https://hub.docker.com/r/sortdrop/smart_leak_detector
 
+# IoT Device
 ## Features
 
 - WiFi connectivity with automatic reconnection
