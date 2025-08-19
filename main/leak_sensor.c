@@ -4,6 +4,10 @@
 #include "esp_adc/adc_cali.h"
 #include "esp_adc/adc_cali_scheme.h"
 
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
+#include <stdbool.h>
+
 #include "mqtt_client.h"
 
 static const char *TAG = "LEAK_SENSOR";
@@ -12,7 +16,7 @@ static const char *TAG = "LEAK_SENSOR";
 #define ADC_UNIT ADC_UNIT_1
 #define ADC_CHANNEL ADC_CHANNEL_7  // GPIO35
 #define ADC_ATTEN ADC_ATTEN_DB_12 // DB_11 = 0-3.3V Range
-#define ADC_BITWIDTH ADC_BITWIDTH_12 // 12-bit resolution (range is 9-bit resolution - 12-bit resolution)
+#define ADC_BITWIDTH ADC_BITWIDTH_9 // 12-bit resolution (range is 9-bit resolution - 12-bit resolution)
 
 // ADC handle
 static adc_oneshot_unit_handle_t adc1_handle;
@@ -64,24 +68,23 @@ int liquid_level_sensor_read(void)
         ESP_ERROR_CHECK(adc_cali_raw_to_voltage(adc1_cali_handle, adc_raw, &voltage));
     }
     
-    ESP_LOGI(TAG, "ADC%d Channel[%d] Raw Data: %d, Voltage: %dmV", ADC_UNIT, ADC_CHANNEL, adc_raw, voltage);
-    
-    return adc_raw;
-}
-
-float liquid_level_sensor_voltage(int sensor_value)
-{
-    float voltage = 0.0;
-    
-    if (do_calibration1) {
-        int voltage_mv = 0;
-        ESP_ERROR_CHECK(adc_cali_raw_to_voltage(adc1_cali_handle, sensor_value, &voltage_mv));
-        voltage = (float)voltage_mv / 1000.0; // Convert mV to V
-    } else {
-        // If calibration is not available, use a simple conversion
-        // Assuming 3.3V reference and 12-bit ADC (4095 max value)
-        voltage = (float)sensor_value * 3.3 / 4095.0;
-    }
+    //ESP_LOGI(TAG, "ADC%d Channel[%d] Raw Data: %d, Voltage: %dmV", ADC_UNIT, ADC_CHANNEL, adc_raw, voltage);
     
     return voltage;
+}
+
+bool leak_detection(int voltage, int leak_threshold, int flush_threshold){
+    int secondary_reading = liquid_level_sensor_read();
+
+    //vTaskDelay(pdMS_TO_TICKS(2000));
+
+    return (leak_threshold > voltage && leak_threshold > secondary_reading && voltage > flush_threshold);
+}
+
+bool full_tank_detection(int voltage, int leak_threshold){
+    return (voltage > leak_threshold);
+}
+
+bool flush_detection(int voltage, int flush_threshold){
+    return (flush_threshold > voltage);
 }

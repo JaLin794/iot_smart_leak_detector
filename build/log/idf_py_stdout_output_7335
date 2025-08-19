@@ -1,0 +1,41 @@
+Command: ninja all
+[1/9] Performing build step for 'bootloader'
+[1/1] cd /root/leak_detector_liquid_level_ws/leak_detector/build/bootloader && /root/.espressif/python_env/idf6.0_py3.10_env/bin/python /root/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /root/leak_detector_liquid_level_ws/leak_detector/build/bootloader/bootloader.bin
+Bootloader binary size 0x6690 bytes. 0x970 bytes (8%) free.
+[2/7] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+In file included from /root/leak_detector_liquid_level_ws/leak_detector/main/main.c:7:
+/root/leak_detector_liquid_level_ws/leak_detector/main/iot_wifi.h:7:13: warning: 'event_handler' declared 'static' but never defined [-Wunused-function]
+    7 | static void event_handler(void* arg, esp_event_base_t event_base, int32_t event_id, void* event_data);
+      |             ^~~~~~~~~~~~~
+/root/leak_detector_liquid_level_ws/leak_detector/main/iot_wifi.h:8:13: warning: 'wifi_init_sta' declared 'static' but never defined [-Wunused-function]
+    8 | static void wifi_init_sta(void);
+      |             ^~~~~~~~~~~~~
+/root/leak_detector_liquid_level_ws/leak_detector/main/iot_wifi.h:9:13: warning: 'get_device_service_name' declared 'static' but never defined [-Wunused-function]
+    9 | static void get_device_service_name(char *service_name, size_t max);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~
+In file included from /root/leak_detector_liquid_level_ws/leak_detector/main/main.c:8:
+/root/leak_detector_liquid_level_ws/leak_detector/main/iot_mqtt.h:11:13: warning: 'mqtt_event_handler' declared 'static' but never defined [-Wunused-function]
+   11 | static void mqtt_event_handler(void *handler_args, esp_event_base_t base, int32_t event_id, void *event_data);
+      |             ^~~~~~~~~~~~~~~~~~
+/root/leak_detector_liquid_level_ws/leak_detector/main/main.c:16:21: warning: 'mqtt_task_handle' defined but not used [-Wunused-variable]
+   16 | static TaskHandle_t mqtt_task_handle = NULL;
+      |                     ^~~~~~~~~~~~~~~~
+/root/leak_detector_liquid_level_ws/leak_detector/main/main.c:15:21: warning: 'sensor_task_handle' defined but not used [-Wunused-variable]
+   15 | static TaskHandle_t sensor_task_handle = NULL;
+      |                     ^~~~~~~~~~~~~~~~~~
+[3/7] Linking C static library esp-idf/main/libmain.a
+[4/7] Generating esp-idf/esp_system/ld/sections.ld
+info: Default value for BT_ENABLED in sdkconfig is y but it is n according to Kconfig.
+Using default value from sdkconfig (y).
+info: Default value for ESP_COEX_SW_COEXIST_ENABLE in sdkconfig is y but it is n according to Kconfig.
+Using default value from sdkconfig (y).
+[5/7] Linking CXX executable leak_detector.elf
+[6/7] Generating binary image from built executable
+esptool.py v4.10.dev2
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /root/leak_detector_liquid_level_ws/leak_detector/build/leak_detector.bin
+[7/7] cd /root/leak_detector_liquid_level_ws/leak_detector/build && /root/.espressif/python_env/idf6.0_py3.10_env/bin/python /root/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /root/leak_detector_liquid_level_ws/leak_detector/build/partition_table/partition-table.bin /root/leak_detector_liquid_level_ws/leak_detector/build/leak_detector.bin
+leak_detector.bin binary size 0xfab20 bytes. Smallest app partition is 0x100000 bytes. 0x54e0 bytes (2%) free.
+Warning: The smallest app partition is nearly full (2% free space left)!

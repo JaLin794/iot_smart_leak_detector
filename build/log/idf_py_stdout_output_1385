@@ -1,0 +1,80 @@
+Command: ninja flash
+[1/5] cd /root/leak_detector_liquid_level_ws/leak_detector/build && /root/.espressif/python_env/idf6.0_py3.10_env/bin/python /root/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /root/leak_detector_liquid_level_ws/leak_detector/build/partition_table/partition-table.bin /root/leak_detector_liquid_level_ws/leak_detector/build/leak_detector.bin
+leak_detector.bin binary size 0xfab10 bytes. Smallest app partition is 0x100000 bytes. 0x54f0 bytes (2%) free.
+Warning: The smallest app partition is nearly full (2% free space left)!
+[2/5] Performing build step for 'bootloader'
+[1/1] cd /root/leak_detector_liquid_level_ws/leak_detector/build/bootloader && /root/.espressif/python_env/idf6.0_py3.10_env/bin/python /root/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /root/leak_detector_liquid_level_ws/leak_detector/build/bootloader/bootloader.bin
+Bootloader binary size 0x6690 bytes. 0x970 bytes (8%) free.
+[2/3] Running utility command for flash
+esptool.py --chip esp32 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 4MB 0x1000 bootloader/bootloader.bin 0x8000 partition_table/partition-table.bin 0x10000 leak_detector.bin
+esptool.py v4.10.dev2
+Serial port /dev/ttyUSB0
+Connecting....
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 26MHz
+MAC: 00:4b:12:8e:c3:40
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Flash will be erased from 0x00010000 to 0x0010afff...
+SHA digest in image updated
+Compressed 26256 bytes to 16582...
+Writing at 0x00001000... (50 %)
+Writing at 0x0000758c... (100 %)
+Wrote 26256 bytes (16582 compressed) at 0x00001000 in 0.7 seconds (effective 322.8 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 955.8 kbit/s)...
+Hash of data verified.
+Compressed 1026832 bytes to 636915...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001d9a0... (5 %)
+Writing at 0x0002ad35... (7 %)
+Writing at 0x000334c2... (10 %)
+Writing at 0x0003e428... (12 %)
+Writing at 0x000441e1... (15 %)
+Writing at 0x00049d3c... (17 %)
+Writing at 0x0004f6ea... (20 %)
+Writing at 0x00055539... (23 %)
+Writing at 0x0005b2b6... (25 %)
+Writing at 0x000615ba... (28 %)
+Writing at 0x00067323... (30 %)
+Writing at 0x0006cd93... (33 %)
+Writing at 0x00072b9d... (35 %)
+Writing at 0x000791ac... (38 %)
+Writing at 0x0007eddc... (41 %)
+Writing at 0x00084b70... (43 %)
+Writing at 0x0008a454... (46 %)
+Writing at 0x0008f837... (48 %)
+Writing at 0x000953e4... (51 %)
+Writing at 0x0009afb5... (53 %)
+Writing at 0x000a07c9... (56 %)
+Writing at 0x000a5e4f... (58 %)
+Writing at 0x000ab94e... (61 %)
+Writing at 0x000b1a22... (64 %)
+Writing at 0x000b73d8... (66 %)
+Writing at 0x000bd18f... (69 %)
+Writing at 0x000c2d03... (71 %)
+Writing at 0x000c879a... (74 %)
+Writing at 0x000ce014... (76 %)
+Writing at 0x000d3cbd... (79 %)
+Writing at 0x000d990d... (82 %)
+Writing at 0x000df01d... (84 %)
+Writing at 0x000e80ca... (87 %)
+Writing at 0x000ee7eb... (89 %)
+Writing at 0x000f4669... (92 %)
+Writing at 0x000fa267... (94 %)
+Writing at 0x00100606... (97 %)
+Writing at 0x00105a1e... (100 %)
+Wrote 1026832 bytes (636915 compressed) at 0x00010000 in 14.6 seconds (effective 561.7 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

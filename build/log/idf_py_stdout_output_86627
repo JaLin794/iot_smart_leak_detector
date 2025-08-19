@@ -1,0 +1,336 @@
+Command: /root/.espressif/python_env/idf6.0_py3.10_env/bin/python /root/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /root/leak_detector_liquid_level_ws/leak_detector/build/leak_detector.elf /root/leak_detector_liquid_level_ws/leak_detector/build/bootloader/bootloader.elf -m '/root/.espressif/python_env/idf6.0_py3.10_env/bin/python' '/root/esp/esp-idf/tools/idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6372
+load:0x40078000,len:15920
+ho 0 tail 12 room 4
+load:0x40080400,len:3880
+entry 0x40080638
+[0;32mI (32) boot: ESP-IDF v6.0-dev-1489-g4e036983a7-dirty 2nd stage bootloader[0m
+[0;32mI (32) boot: compile time Aug 19 2025 19:47:21[0m
+[0;32mI (32) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.1[0m
+[0;32mI (38) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (41) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (45) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (49) boot: Enabling RNG early entropy source...[0m
+[0;32mI (53) boot: Partition Table:[0m
+[0;32mI (56) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (62) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (68) boot:  1 phy_init     boot: End of partition table[0m
+[0;32mI (85) esp_image: segment 0: paddr(85) esp_image: segment 0: paddr(85) esp_image: segment 0: paddr(85) esp_image: segment 0: paddr(85) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a=00010020 vaddr=3f400020 size=0a=00010020 vaddr=3f400020 size=0a=00010020 vaddr=3f400020 size=0a=00010020 vaddr=3f400020 size=0a=00010020 vaddr=3f400020 size=0a=00010020 vaddr=3f400020 size=0a=00010020 vaddr=3f400020 size=0a=00010020 vaddr=3f400020 size=0a=00010020 vaddr=3f400020 size=0a=00010020 vaddr=3f400020 size=0a=00010020 vaddr=3f400020 size=0a=00010020 vaddr=3f400020 size=0a=00010020 vaddr=3f400020 size=0a=00010020 vaddr=3f400020 size=0a=00010020 vaddr=3f400020 size=0a=00010020 vaddr=3f400020 size=0a9e4h ( 43492) map[0m
+[0;32mI (108) esp_image: segment 1: paddr=0001aa0c vaddr=3ffb0000 size=02794h ( 10132) load[0m
+[0;32mI (112) esp_image: segment 2: paddr=0001d1a8 vaddr=40080000 size=02e70h ( 11888) load[0m
+[0;32mI (117) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=1496ch ( 84332) map[0m
+[0;32mI (149) esp_image: segment 4: paddr=00034994 vaddr=40082e70 size=0a838h ( 43064) load[0m
+[0;32mI (166) esp_image: segment 5: paddr=0003f1d4 vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (174) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (174) boot: Disabling RNG early entropy source...[0m
+[0;32mI (185) cpu_start: Multicore app[0m
+[0;32mI (193) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (193) cpu_start: Pro cpu start user code[0m
+[0;32mI (193) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (195) app_init: Application information:[0m
+[0;32mI (199) app_init: Project name:     leak_detector[0m
+[0;32mI (203) app_init: App version:      0a46474-dirty[0m
+[0;32mI (208) app_init: Compile time:     Aug 19 2025 19:47:15[0m
+[0;32mI (213) app_init: ELF file SHA256:  2c87e42c2...[0m
+[0;32mI (217) app_init: ESP-IDF:          v6.0-dev-1489-g4e036983a7-dirty[0m
+[0;32mI (223) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (227) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (231) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (235) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (241) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (246) heap_init: At 3FFB3098 len 0002CF68 (179 KiB): DRAM[0m
+[0;32mI (251) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (257) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (262) heap_init: At 4008D6A8 len 00012958 (74 KiB): IRAM[0m
+[0;32mI (269) spi_flash: detected chip: generic[0m
+[0;32mI (271) spi_flash: flash io: dio[0m
+[0;32mI (275) coexist: coex firmware version: 831ec70[0m
+[0;32mI (279) main_task: Started on CPU0[0m
+[0;32mI (289) main_task: Calling app_main()[0m
+[0;32mI (289) MAIN: Starting Toilet Leak Detector...[0m
+[0;32mI (289) LEAK_SENSOR: Using Line Fitting Calibration[0m
+[0;32mI (289) LEAK_SENSOR: Liquid level sensor initialized[0m
+[0;32mI (289) MAIN: Liquid level sensor initialized[0m
+[0;32mI (299) MAIN: Sensor monitoring task started[0m
+[0;32mI (299) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (309) MAIN: All tasks created successfully[0m
+[0;32mI (309) main_task: Returned from app_main()[0m
+[0;32mI (559) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (809) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (1059) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (1309) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (1559) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (1809) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (2059) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (2309) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (2559) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (2809) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (3059) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (3309) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (3559) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (3809) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (4059) MAIN: Sensor Voltage: 1876mV[0m
+[0;32mI (4309) MAIN: Sensor Voltage: 1935mV[0m
+[0;32mI (4559) MAIN: Sensor Voltage: 1968mV[0m
+[0;32mI (4809) MAIN: Sensor Voltage: 1975mV[0m
+[0;32mI (5059) MAIN: Sensor Voltage: 1994mV[0m
+[0;32mI (5309) MAIN: Sensor Voltage: 1981mV[0m
+[0;32mI (5559) MAIN: Sensor Voltage: 1975mV[0m
+[0;32mI (5809) MAIN: Sensor Voltage: 1955mV[0m
+[0;32mI (6059) MAIN: Sensor Voltage: 1948mV[0m
+[0;32mI (6309) MAIN: Sensor Voltage: 1948mV[0m
+[0;32mI (6559) MAIN: Sensor Voltage: 1948mV[0m
+[0;32mI (6809) MAIN: Sensor Voltage: 1948mV[0m
+[0;32mI (7059) MAIN: Sensor Voltage: 1942mV[0m
+[0;32mI (7309) MAIN: Sensor Voltage: 1942mV[0m
+[0;32mI (7559) MAIN: Sensor Voltage: 1942mV[0m
+[0;32mI (7809) MAIN: Sensor Voltage: 1935mV[0m
+[0;32mI (8059) MAIN: Sensor Voltage: 1922mV[0m
+[0;32mI (8309) MAIN: Sensor Voltage: 1909mV[0m
+[0;32mI (8559) MAIN: Sensor Voltage: 1902mV[0m
+[0;32mI (8809) MAIN: Sensor Voltage: 1902mV[0m
+[0;32mI (9059) MAIN: Sensor Voltage: 1889mV[0m
+[0;32mI (9309) MAIN: Sensor Voltage: 1883mV[0m
+[0;32mI (9559) MAIN: Sensor Voltage: 1876mV[0m
+[0;32mI (9809) MAIN: Sensor Voltage: 1869mV[0m
+[0;32mI (10059) MAIN: Sensor Voltage: 1863mV[0m
+[0;32mI (10309) MAIN: Sensor Voltage: 1863mV[0m
+[0;32mI (10559) MAIN: Sensor Voltage: 1915mV[0m
+[0;32mI (10809) MAIN: Sensor Voltage: 1856mV[0m
+[0;32mI (11059) MAIN: Sensor Voltage: 1850mV[0m
+[0;32mI (11309) MAIN: Sensor Voltage: 1850mV[0m
+[0;32mI (11559) MAIN: Sensor Voltage: 1850mV[0m
+[0;32mI (11809) MAIN: Sensor Voltage: 1837mV[0m
+[0;32mI (12059) MAIN: Sensor Voltage: 1837mV[0m
+[0;32mI (12309) MAIN: Sensor Voltage: 1837mV[0m
+[0;32mI (12559) MAIN: Sensor Voltage: 1837mV[0m
+[0;32mI (12809) MAIN: Sensor Voltage: 1837mV[0m
+[0;32mI (13059) MAIN: Sensor Voltage: 1837mV[0m
+[0;32mI (13309) MAIN: Sensor Voltage: 1837mV[0m
+[0;32mI (13559) MAIN: Sensor Voltage: 1837mV[0m
+[0;32mI (13809) MAIN: Sensor Voltage: 1837mV[0m
+[0;32mI (14059) MAIN: Sensor Voltage: 1817mV[0m
+[0;32mI (14309) MAIN: Sensor Voltage: 1830mV[0m
+[0;32mI (14559) MAIN: Sensor Voltage: 1837mV[0m
+[0;32mI (14809) MAIN: Sensor Voltage: 1830mV[0m
+[0;32mI (15059) MAIN: Sensor Voltage: 1837mV[0m
+[0;32mI (15309) MAIN: Sensor Voltage: 1837mV[0m
+[0;32mI (15559) MAIN: Sensor Voltage: 1830mV[0m
+[0;32mI (15809) MAIN: Sensor Voltage: 1837mV[0m
+[0;32mI (16059) MAIN: Sensor Voltage: 1837mV[0m
+[0;32mI (16309) MAIN: Sensor Voltage: 1843mV[0m
+[0;32mI (16559) MAIN: Sensor Voltage: 1837mV[0m
+[0;32mI (16809) MAIN: Sensor Voltage: 1843mV[0m
+[0;32mI (17059) MAIN: Sensor Voltage: 1850mV[0m
+[0;32mI (17309) MAIN: Sensor Voltage: 1850mV[0m
+[0;32mI (17559) MAIN: Sensor Voltage: 1843mV[0m
+[0;32mI (17809) MAIN: Sensor Voltage: 1850mV[0m
+[0;32mI (18059) MAIN: Sensor Voltage: 1850mV[0m
+[0;32mI (18309) MAIN: Sensor Voltage: 1830mV[0m
+[0;32mI (18559) MAIN: Sensor Voltage: 1791mV[0m
+[0;32mI (18809) MAIN: Sensor Voltage: 1843mV[0m
+[0;32mI (19059) MAIN: Sensor Voltage: 1843mV[0m
+[0;32mI (19309) MAIN: Sensor Voltage: 1837mV[0m
+[0;32mI (19559) MAIN: Sensor Voltage: 1837mV[0m
+[0;32mI (19809) MAIN: Sensor Voltage: 1837mV[0m
+[0;32mI (20059) MAIN: Sensor Voltage: 1837mV[0m
+[0;32mI (20309) MAIN: Sensor Voltage: 1837mV[0m
+[0;32mI (20559) MAIN: Sensor Voltage: 1810mV[0m
+[0;32mI (20809) MAIN: Sensor Voltage: 1830mV[0m
+[0;32mI (21059) MAIN: Sensor Voltage: 1830mV[0m
+[0;32mI (21309) MAIN: Sensor Voltage: 1830mV[0m
+[0;32mI (21559) MAIN: Sensor Voltage: 1823mV[0m
+[0;32mI (21809) MAIN: Sensor Voltage: 1823mV[0m
+[0;32mI (22059) MAIN: Sensor Voltage: 1830mV[0m
+[0;32mI (22309) MAIN: Sensor Voltage: 1817mV[0m
+[0;32mI (22559) MAIN: Sensor Voltage: 1810mV[0m
+[0;32mI (22809) MAIN: Sensor Voltage: 1804mV[0m
+[0;32mI (23059) MAIN: Sensor Voltage: 1804mV[0m
+[0;32mI (23309) MAIN: Sensor Voltage: 1731mV[0m
+[0;32mI (25559) MAIN: Sensor Voltage: 1580mV[0m
+[0;32mI (27809) MAIN: Sensor Voltage: 1488mV[0m
+[0;32mI (30059) MAIN: Sensor Voltage: 1002mV[0m
+[0;32mI (32309) MAIN: Sensor Voltage: 963mV[0m
+[0;32mI (32559) MAIN: Sensor Voltage: 970mV[0m
+[0;32mI (32809) MAIN: Sensor Voltage: 970mV[0m
+[0;32mI (33059) MAIN: Sensor Voltage: 970mV[0m
+[0;32mI (33309) MAIN: Sensor Voltage: 976mV[0m
+[0;32mI (33559) MAIN: Sensor Voltage: 976mV[0m
+[0;32mI (33809) MAIN: Sensor Voltage: 989mV[0m
+[0;32mI (34059) MAIN: Sensor Voltage: 976mV[0m
+[0;32mI (34309) MAIN: Sensor Voltage: 917mV[0m
+[0;32mI (34559) MAIN: Sensor Voltage: 1745mV[0m
+[0;32mI (36809) MAIN: Sensor Voltage: 1784mV[0m
+[0;32mI (37059) MAIN: Sensor Voltage: 1777mV[0m
+[0;32mI (37309) MAIN: Sensor Voltage: 1777mV[0m
+[0;32mI (37559) MAIN: Sensor Voltage: 1777mV[0m
+[0;32mI (37809) MAIN: Sensor Voltage: 1771mV[0m
+[0;32mI (38059) MAIN: Sensor Voltage: 1777mV[0m
+[0;32mI (38309) MAIN: Sensor Voltage: 1771mV[0m
+[0;32mI (38559) MAIN: Sensor Voltage: 1777mV[0m
+[0;32mI (38809) MAIN: Sensor Voltage: 1777mV[0m
+[0;32mI (39059) MAIN: Sensor Voltage: 1771mV[0m
+[0;32mI (39309) MAIN: Sensor Voltage: 1771mV[0m
+[0;32mI (39559) MAIN: Sensor Voltage: 1777mV[0m
+[0;32mI (39809) MAIN: Sensor Voltage: 1777mV[0m
+[0;32mI (40059) MAIN: Sensor Voltage: 1797mV[0m
+[0;32mI (40309) MAIN: Sensor Voltage: 1777mV[0m
+[0;32mI (40559) MAIN: Sensor Voltage: 1771mV[0m
+[0;32mI (40809) MAIN: Sensor Voltage: 1771mV[0m
+[0;32mI (41059) MAIN: Sensor Voltage: 1791mV[0m
+[0;32mI (41309) MAIN: Sensor Voltage: 1771mV[0m
+[0;32mI (41559) MAIN: Sensor Voltage: 1771mV[0m
+[0;32mI (41809) MAIN: Sensor Voltage: 1771mV[0m
+[0;32mI (42059) MAIN: Sensor Voltage: 1771mV[0m
+[0;32mI (42309) MAIN: Sensor Voltage: 1784mV[0m
+[0;32mI (42559) MAIN: Sensor Voltage: 1745mV[0m
+[0;32mI (44809) MAIN: Sensor Voltage: 575mV[0m
+[0;32mI (45059) MAIN: Sensor Voltage: 418mV[0m
+[0;32mI (45309) MAIN: Sensor Voltage: 372mV[0m
+[0;32mI (45559) MAIN: Sensor Voltage: 359mV[0m
+[0;32mI (45809) MAIN: Sensor Voltage: 359mV[0m
+[0;32mI (46059) MAIN: Sensor Voltage: 365mV[0m
+[0;32mI (46309) MAIN: Sensor Voltage: 365mV[0m
+[0;32mI (46559) MAIN: Sensor Voltage: 464mV[0m
+[0;32mI (46809) MAIN: Sensor Voltage: 497mV[0m
+[0;32mI (47059) MAIN: Sensor Voltage: 444mV[0m
+[0;32mI (47309) MAIN: Sensor Voltage: 575mV[0m
+[0;32mI (47559) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (47809) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (48059) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (48309) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (48559) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (48809) MAIN: Sensor Voltage: 1863mV[0m
+[0;32mI (49059) MAIN: Sensor Voltage: 1896mV[0m
+[0;32mI (49309) MAIN: Sensor Voltage: 1968mV[0m
+[0;32mI (49559) MAIN: Sensor Voltage: 1955mV[0m
+[0;32mI (49809) MAIN: Sensor Voltage: 1935mV[0m
+[0;32mI (50059) MAIN: Sensor Voltage: 1915mV[0m
+[0;32mI (50309) MAIN: Sensor Voltage: 1902mV[0m
+[0;32mI (50559) MAIN: Sensor Voltage: 1889mV[0m
+[0;32mI (50809) MAIN: Sensor Voltage: 1889mV[0m
+[0;32mI (51059) MAIN: Sensor Voltage: 1869mV[0m
+[0;32mI (51309) MAIN: Sensor Voltage: 1863mV[0m
+[0;32mI (51559) MAIN: Sensor Voltage: 1876mV[0m
+[0;32mI (51809) MAIN: Sensor Voltage: 1850mV[0m
+[0;32mI (52059) MAIN: Sensor Voltage: 1850mV[0m
+[0;32mI (52309) MAIN: Sensor Voltage: 1837mV[0m
+[0;32mI (52559) MAIN: Sensor Voltage: 1837mV[0m
+[0;32mI (52809) MAIN: Sensor Voltage: 1837mV[0m
+[0;32mI (53059) MAIN: Sensor Voltage: 1830mV[0m
+[0;32mI (53309) MAIN: Sensor Voltage: 1817mV[0m
+[0;32mI (53559) MAIN: Sensor Voltage: 1817mV[0m
+[0;32mI (53809) MAIN: Sensor Voltage: 1797mV[0m
+[0;32mI (54059) MAIN: Sensor Voltage: 1751mV[0m
+[0;32mI (54309) MAIN: Sensor Voltage: 1705mV[0m
+[0;32mI (56559) MAIN: Sensor Voltage: 1357mV[0m
+[0;32mI (58809) MAIN: Sensor Voltage: 1318mV[0m
+[0;32mI (61059) MAIN: Sensor Voltage: 1245mV[0m
+[0;32mI (63309) MAIN: Sensor Voltage: 1245mV[0m
+[0;32mI (65559) MAIN: Sensor Voltage: 1219mV[0m
+[0;32mI (67809) MAIN: Sensor Voltage: 1206mV[0m
+[0;32mI (70059) MAIN: Sensor Voltage: 1167mV[0m
+[0;32mI (72309) MAIN: Sensor Voltage: 1127mV[0m
+[0;32mI (74559) MAIN: Sensor Voltage: 1101mV[0m
+[0;32mI (76809) MAIN: Sensor Voltage: 1002mV[0m
+[0;32mI (79059) MAIN: Sensor Voltage: 976mV[0m
+[0;32mI (79309) MAIN: Sensor Voltage: 976mV[0m
+[0;32mI (79559) MAIN: Sensor Voltage: 1022mV[0m
+[0;32mI (81809) MAIN: Sensor Voltage: 956mV[0m
+[0;32mI (82059) MAIN: Sensor Voltage: 943mV[0m
+[0;32mI (82309) MAIN: Sensor Voltage: 976mV[0m
+[0;32mI (82559) MAIN: Sensor Voltage: 956mV[0m
+[0;32mI (82809) MAIN: Sensor Voltage: 956mV[0m
+[0;32mI (83059) MAIN: Sensor Voltage: 943mV[0m
+[0;32mI (83309) MAIN: Sensor Voltage: 950mV[0m
+[0;32mI (83559) MAIN: Sensor Voltage: 950mV[0m
+[0;32mI (83809) MAIN: Sensor Voltage: 1600mV[0m
+[0;32mI (86059) MAIN: Sensor Voltage: 1758mV[0m
+[0;32mI (86309) MAIN: Sensor Voltage: 1745mV[0m
+[0;32mI (88559) MAIN: Sensor Voltage: 1745mV[0m
+[0;32mI (90809) MAIN: Sensor Voltage: 1751mV[0m
+[0;32mI (91059) MAIN: Sensor Voltage: 1751mV[0m
+[0;32mI (91309) MAIN: Sensor Voltage: 1751mV[0m
+[0;32mI (91559) MAIN: Sensor Voltage: 1751mV[0m
+[0;32mI (91809) MAIN: Sensor Voltage: 1758mV[0m
+[0;32mI (92059) MAIN: Sensor Voltage: 1758mV[0m
+[0;32mI (92309) MAIN: Sensor Voltage: 1751mV[0m
+[0;32mI (92559) MAIN: Sensor Voltage: 1751mV[0m
+[0;32mI (92809) MAIN: Sensor Voltage: 1745mV[0m
+[0;32mI (95059) MAIN: Sensor Voltage: 1745mV[0m
+[0;32mI (97309) MAIN: Sensor Voltage: 1751mV[0m
+[0;32mI (97559) MAIN: Sensor Voltage: 1745mV[0m
+[0;32mI (99809) MAIN: Sensor Voltage: 1738mV[0m
+[0;32mI (102059) MAIN: Sensor Voltage: 1758mV[0m
+[0;32mI (102309) MAIN: Sensor Voltage: 1751mV[0m
+[0;32mI (102559) MAIN: Sensor Voltage: 1745mV[0m
+[0;32mI (104809) MAIN: Sensor Voltage: 1751mV[0m
+[0;32mI (105059) MAIN: Sensor Voltage: 1764mV[0m
+[0;32mI (105309) MAIN: Sensor Voltage: 1731mV[0m
+[0;32mI (107559) MAIN: Sensor Voltage: 1699mV[0m
+[0;32mI (109809) MAIN: Sensor Voltage: 1725mV[0m
+[0;32mI (112059) MAIN: Sensor Voltage: 1738mV[0m
+[0;32mI (114309) MAIN: Sensor Voltage: 1731mV[0m
+[0;32mI (116559) MAIN: Sensor Voltage: 1738mV[0m
+[0;32mI (118809) MAIN: Sensor Voltage: 1127mV[0m
+[0;32mI (121059) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (121309) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (121559) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (121809) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (122059) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (122309) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (122559) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (122809) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (123059) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (123309) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (123559) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (123809) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (124059) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (124309) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (124559) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (124809) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (125059) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (125309) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (125559) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (125809) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (126059) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (126309) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (126559) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (126809) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (127059) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (127309) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (127559) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (127809) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (128059) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (128309) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (128559) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (128809) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (129059) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (129309) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (129559) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (129809) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (130059) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (130309) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (130559) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (130809) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (131059) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (131309) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (131559) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (131809) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (132059) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (132309) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (132559) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (132809) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (133059) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (133309) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (133559) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (133809) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (134059) MAIN: Sensor Voltage: 142mV[0m
+[0;32mI (134309) MAIN: Sensor Voltage: 142mV[0m

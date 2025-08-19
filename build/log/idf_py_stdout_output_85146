@@ -1,0 +1,270 @@
+Command: /root/.espressif/python_env/idf6.0_py3.10_env/bin/python /root/esp/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /root/leak_detector_liquid_level_ws/leak_detector/build/leak_detector.elf /root/leak_detector_liquid_level_ws/leak_detector/build/bootloader/bootloader.elf -m '/root/.espressif/python_env/idf6.0_py3.10_env/bin/python' '/root/esp/esp-idf/tools/idf.py'
+ize=0a878h ( 43128) load
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6372
+load:0x40078000,len:15920
+ho 0 tail 12 room 4
+load:0x40080400,len:3880
+entry 0x40080638
+[0;32mI (32) boot: ESP-IDF v6.0-dev-1489-g4e036983a7-dirty 2nd stage bootloader[0m
+[0;32mI (32) boot: compile time Aug 19 2025 19:47:21[0m
+[0;32mI (32) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.1[0m
+[0;32mI (38) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (41) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (45) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (49) boot: Enabling RNG early entropy source...[0m
+[0;32mI (53) boot: Partition Table:[0m
+[0;32mI (56) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (62) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (68) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (75) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (82) boot: End of partition table[0m
+[0;32mI (85) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0aa24h ( 43556) map[0m
+[0;32mI (108) esp_image: segment 1: paddr=0001aa4c vaddr=3ffb0000 size=02794h ( 10132) load[0m
+[0;32mI (112) esp_image: segment 2: paddr=0001d1e8 vaddr=40080000 size=02e30h ( 11824) load[0m
+[0;32mI (117) esp_image: segment 3: paddr=00020020 vaddr=400d0020 size=14994h ( 84372) map[0m
+[0;32mI (149) esp_image: segment 4: paddr=000349bc vaddr=40082e30 size=0a878h ( 43128) load[0m
+[0;32mI (167) esp_image: segment 5: paddr=0003f23c vaddr=50000000 size=00024h (    36) load[0m
+[0;32mI (174) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (174) boot: Disabling RNG early entropy source...[0m
+[0;32mI (185) cpu_start: Multicore app[0m
+[0;32mI (193) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (193) cpu_start: Pro cpu start user code[0m
+[0;32mI (193) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (195) app_init: Application information:[0m
+[0;32mI (199) app_init: Project name:     leak_detector[0m
+[0;32mI (203) app_init: App version:      0a46474-dirty[0m
+[0;32mI (208) app_init: Compile time:     Aug 19 2025 19:47:15[0m
+[0;32mI (213) app_init: ELF file SHA256:  a3ce28962...[0m
+[0;32mI (217) app_init: ESP-IDF:          v6.0-dev-1489-g4e036983a7-dirty[0m
+[0;32mI (223) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (227) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (231) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (235) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (241) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (246) heap_init: At 3FFB3098 len 0002CF68 (179 KiB): DRAM[0m
+[0;32mI (251) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (257) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (262) heap_init: At 4008D6A8 len 00012958 (74 KiB): IRAM[0m
+[0;32mI (269) spi_flash: detected chip: generic[0m
+[0;32mI (271) spi_flash: flash io: dio[0m
+[0;32mI (275) coexist: coex firmware version: 831ec70[0m
+[0;32mI (279) main_task: Started on CPU0[0m
+[0;32mI (289) main_task: Calling app_main()[0m
+[0;32mI (289) MAIN: Starting Toilet Leak Detector...[0m
+[0;32mI (289) LEAK_SENSOR: Using Line Fitting Calibration[0m
+[0;32mI (289) LEAK_SENSOR: Liquid level sensor initialized[0m
+[0;32mI (289) MAIN: Liquid level sensor initialized[0m
+[0;32mI (299) MAIN: Sensor monitoring task started[0m
+[0;32mI (299) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 157, Voltage: 1173mV[0m
+[0;32mI (309) MAIN: Sensor Voltage: 1173[0m
+[0;32mI (309) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 157, Voltage: 1173mV[0m
+[0;32mI (319) MAIN: All tasks created successfully[0m
+[0;32mI (319) main_task: Returned from app_main()[0m
+[0;32mI (2569) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 157, Voltage: 1173mV[0m
+[0;32mI (2569) MAIN: Sensor Voltage: 1173[0m
+[0;32mI (2569) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 156, Voltage: 1167mV[0m
+[0;32mI (4819) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 156, Voltage: 1167mV[0m
+[0;32mI (4819) MAIN: Sensor Voltage: 1167[0m
+[0;32mI (4819) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 156, Voltage: 1167mV[0m
+[0;32mI (7069) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 156, Voltage: 1167mV[0m
+[0;32mI (7069) MAIN: Sensor Voltage: 1167[0m
+[0;32mI (7069) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 156, Voltage: 1167mV[0m
+[0;32mI (9319) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 158, Voltage: 1180mV[0m
+[0;32mI (9319) MAIN: Sensor Voltage: 1180[0m
+[0;32mI (9319) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 158, Voltage: 1180mV[0m
+[0;32mI (11569) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 62, Voltage: 549mV[0m
+[0;32mI (11569) MAIN: Sensor Voltage: 549[0m
+[0;32mI (11819) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 69, Voltage: 595mV[0m
+[0;32mI (11819) MAIN: Sensor Voltage: 595[0m
+[0;32mI (12069) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 70, Voltage: 602mV[0m
+[0;32mI (12069) MAIN: Sensor Voltage: 602[0m
+[0;32mI (12319) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 274, Voltage: 1942mV[0m
+[0;32mI (12319) MAIN: Sensor Voltage: 1942[0m
+[0;32mI (12569) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 283, Voltage: 2001mV[0m
+[0;32mI (12569) MAIN: Sensor Voltage: 2001[0m
+[0;32mI (12819) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 209, Voltage: 1515mV[0m
+[0;32mI (12819) MAIN: Sensor Voltage: 1515[0m
+[0;32mI (12819) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 208, Voltage: 1508mV[0m
+[0;32mI (15069) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (15069) MAIN: Sensor Voltage: 142[0m
+[0;32mI (15319) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (15319) MAIN: Sensor Voltage: 142[0m
+[0;32mI (15569) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (15569) MAIN: Sensor Voltage: 142[0m
+[0;32mI (15819) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (15819) MAIN: Sensor Voltage: 142[0m
+[0;32mI (16069) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (16069) MAIN: Sensor Voltage: 142[0m
+[0;32mI (16319) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (16319) MAIN: Sensor Voltage: 142[0m
+[0;32mI (16569) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (16569) MAIN: Sensor Voltage: 142[0m
+[0;32mI (16819) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (16819) MAIN: Sensor Voltage: 142[0m
+[0;32mI (17069) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (17069) MAIN: Sensor Voltage: 142[0m
+[0;32mI (17319) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (17319) MAIN: Sensor Voltage: 142[0m
+[0;32mI (17569) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (17569) MAIN: Sensor Voltage: 142[0m
+[0;32mI (17819) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (17819) MAIN: Sensor Voltage: 142[0m
+[0;32mI (18069) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (18069) MAIN: Sensor Voltage: 142[0m
+[0;32mI (18319) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (18319) MAIN: Sensor Voltage: 142[0m
+[0;32mI (18569) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (18569) MAIN: Sensor Voltage: 142[0m
+[0;32mI (18819) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (18819) MAIN: Sensor Voltage: 142[0m
+[0;32mI (19069) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (19069) MAIN: Sensor Voltage: 142[0m
+[0;32mI (19319) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (19319) MAIN: Sensor Voltage: 142[0m
+[0;32mI (19569) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (19569) MAIN: Sensor Voltage: 142[0m
+[0;32mI (19819) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (19819) MAIN: Sensor Voltage: 142[0m
+[0;32mI (20069) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (20069) MAIN: Sensor Voltage: 142[0m
+[0;32mI (20319) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (20319) MAIN: Sensor Voltage: 142[0m
+[0;32mI (20569) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (20569) MAIN: Sensor Voltage: 142[0m
+[0;32mI (20819) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (20819) MAIN: Sensor Voltage: 142[0m
+[0;32mI (21069) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (21069) MAIN: Sensor Voltage: 142[0m
+[0;32mI (21319) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (21319) MAIN: Sensor Voltage: 142[0m
+[0;32mI (21569) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (21569) MAIN: Sensor Voltage: 142[0m
+[0;32mI (21819) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (21819) MAIN: Sensor Voltage: 142[0m
+[0;32mI (22069) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (22069) MAIN: Sensor Voltage: 142[0m
+[0;32mI (22319) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (22319) MAIN: Sensor Voltage: 142[0m
+[0;32mI (22569) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (22569) MAIN: Sensor Voltage: 142[0m
+[0;32mI (22819) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (22819) MAIN: Sensor Voltage: 142[0m
+[0;32mI (23069) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (23069) MAIN: Sensor Voltage: 142[0m
+[0;32mI (23319) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (23319) MAIN: Sensor Voltage: 142[0m
+[0;32mI (23569) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (23569) MAIN: Sensor Voltage: 142[0m
+[0;32mI (23819) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (23819) MAIN: Sensor Voltage: 142[0m
+[0;32mI (24069) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (24069) MAIN: Sensor Voltage: 142[0m
+[0;32mI (24319) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (24319) MAIN: Sensor Voltage: 142[0m
+[0;32mI (24569) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (24569) MAIN: Sensor Voltage: 142[0m
+[0;32mI (24819) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (24819) MAIN: Sensor Voltage: 142[0m
+[0;32mI (25069) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (25069) MAIN: Sensor Voltage: 142[0m
+[0;32mI (25319) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (25319) MAIN: Sensor Voltage: 142[0m
+[0;32mI (25569) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (25569) MAIN: Sensor Voltage: 142[0m
+[0;32mI (25819) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (25819) MAIN: Sensor Voltage: 142[0m
+[0;32mI (26069) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (26069) MAIN: Sensor Voltage: 142[0m
+[0;32mI (26319) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (26319) MAIN: Sensor Voltage: 142[0m
+[0;32mI (26569) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (26569) MAIN: Sensor Voltage: 142[0m
+[0;32mI (26819) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (26819) MAIN: Sensor Voltage: 142[0m
+[0;32mI (27069) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (27069) MAIN: Sensor Voltage: 142[0m
+[0;32mI (27319) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (27319) MAIN: Sensor Voltage: 142[0m
+[0;32mI (27569) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (27569) MAIN: Sensor Voltage: 142[0m
+[0;32mI (27819) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (27819) MAIN: Sensor Voltage: 142[0m
+[0;32mI (28069) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (28069) MAIN: Sensor Voltage: 142[0m
+[0;32mI (28319) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (28319) MAIN: Sensor Voltage: 142[0m
+[0;32mI (28569) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (28569) MAIN: Sensor Voltage: 142[0m
+[0;32mI (28819) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (28819) MAIN: Sensor Voltage: 142[0m
+[0;32mI (29069) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (29069) MAIN: Sensor Voltage: 142[0m
+[0;32mI (29319) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (29319) MAIN: Sensor Voltage: 142[0m
+[0;32mI (29569) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (29569) MAIN: Sensor Voltage: 142[0m
+[0;32mI (29819) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (29819) MAIN: Sensor Voltage: 142[0m
+[0;32mI (30069) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (30069) MAIN: Sensor Voltage: 142[0m
+[0;32mI (30319) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (30319) MAIN: Sensor Voltage: 142[0m
+[0;32mI (30569) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (30569) MAIN: Sensor Voltage: 142[0m
+[0;32mI (30819) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (30819) MAIN: Sensor Voltage: 142[0m
+[0;32mI (31069) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (31069) MAIN: Sensor Voltage: 142[0m
+[0;32mI (31319) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (31319) MAIN: Sensor Voltage: 142[0m
+[0;32mI (31569) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (31569) MAIN: Sensor Voltage: 142[0m
+[0;32mI (31819) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (31819) MAIN: Sensor Voltage: 142[0m
+[0;32mI (32069) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (32069) MAIN: Sensor Voltage: 142[0m
+[0;32mI (32319) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (32319) MAIN: Sensor Voltage: 142[0m
+[0;32mI (32569) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (32569) MAIN: Sensor Voltage: 142[0m
+[0;32mI (32819) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (32819) MAIN: Sensor Voltage: 142[0m
+[0;32mI (33069) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (33069) MAIN: Sensor Voltage: 142[0m
+[0;32mI (33319) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (33319) MAIN: Sensor Voltage: 142[0m
+[0;32mI (33569) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (33569) MAIN: Sensor Voltage: 142[0m
+[0;32mI (33819) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (33819) MAIN: Sensor Voltage: 142[0m
+[0;32mI (34069) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (34069) MAIN: Sensor Voltage: 142[0m
+[0;32mI (34319) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (34319) MAIN: Sensor Voltage: 142[0m
+[0;32mI (34569) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (34569) MAIN: Sensor Voltage: 142[0m
+[0;32mI (34819) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (34819) MAIN: Sensor Voltage: 142[0m
+[0;32mI (35069) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (35069) MAIN: Sensor Voltage: 142[0m
+[0;32mI (35319) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (35319) MAIN: Sensor Voltage: 142[0m
+[0;32mI (35569) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (35569) MAIN: Sensor Voltage: 142[0m
+[0;32mI (35819) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (35819) MAIN: Sensor Voltage: 142[0m
+[0;32mI (36069) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (36069) MAIN: Sensor Voltage: 142[0m
+[0;32mI (36319) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (36319) MAIN: Sensor Voltage: 142[0m
+[0;32mI (36569) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (36569) MAIN: Sensor Voltage: 142[0m
+[0;32mI (36819) LEAK_SENSOR: ADC0 Channel[7] Raw Data: 0, Voltage: 142mV[0m
+[0;32mI (36819) MAIN: Sensor Voltage: 142[0m

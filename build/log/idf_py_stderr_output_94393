@@ -1,0 +1,44 @@
+Command: cmake -G Ninja -DPYTHON_DEPS_CHECKED=1 -DPYTHON=/root/.espressif/python_env/idf6.0_py3.10_env/bin/python -DESP_PLATFORM=1 -DCCACHE_ENABLE=0 /root/leak_detector_liquid_level_ws/leak_detector
+info: Default value for BT_ENABLED in sdkconfig is y but it is n according to Kconfig.
+Using default value from sdkconfig (y).
+info: Default value for BT_CONTROLLER_ENABLED in sdkconfig is y but it is n according to Kconfig.
+info: Default value for BTDM_CTRL_MODE_BLE_ONLY in sdkconfig is y but it is n according to Kconfig.
+info: Default value for BTDM_CTRL_BLE_MAX_CONN in sdkconfig is 3 but it is  according to Kconfig.
+Using default value from sdkconfig (3).
+info: Default value for BTDM_CTRL_PINNED_TO_CORE_0 in sdkconfig is y but it is n according to Kconfig.
+info: Default value for BTDM_CTRL_HCI_MODE_VHCI in sdkconfig is y but it is n according to Kconfig.
+info: Default value for BTDM_CTRL_MODEM_SLEEP in sdkconfig is y but it is n according to Kconfig.
+Using default value from sdkconfig (y).
+info: Default value for BTDM_CTRL_MODEM_SLEEP_MODE_ORIG in sdkconfig is y but it is n according to Kconfig.
+info: Default value for BTDM_CTRL_LPCLK_SEL_MAIN_XTAL in sdkconfig is y but it is n according to Kconfig.
+info: Default value for BTDM_BLE_DEFAULT_SCA_250PPM in sdkconfig is y but it is n according to Kconfig.
+info: Default value for BTDM_BLE_SCAN_DUPL in sdkconfig is y but it is n according to Kconfig.
+Using default value from sdkconfig (y).
+info: Default value for BTDM_SCAN_DUPL_TYPE_DEVICE in sdkconfig is y but it is n according to Kconfig.
+info: Default value for BTDM_SCAN_DUPL_CACHE_SIZE in sdkconfig is 100 but it is  according to Kconfig.
+Using default value from sdkconfig (100).
+info: Default value for BTDM_SCAN_DUPL_CACHE_REFRESH_PERIOD in sdkconfig is 0 but it is  according to Kconfig.
+Using default value from sdkconfig (0).
+info: Default value for BTDM_CTRL_FULL_SCAN_SUPPORTED in sdkconfig is y but it is n according to Kconfig.
+Using default value from sdkconfig (y).
+info: Default value for BTDM_BLE_ADV_REPORT_FLOW_CTRL_SUPP in sdkconfig is y but it is n according to Kconfig.
+Using default value from sdkconfig (y).
+info: Default value for BTDM_BLE_ADV_REPORT_FLOW_CTRL_NUM in sdkconfig is 100 but it is  according to Kconfig.
+Using default value from sdkconfig (100).
+info: Default value for BTDM_BLE_ADV_REPORT_DISCARD_THRSHOLD in sdkconfig is 20 but it is  according to Kconfig.
+Using default value from sdkconfig (20).
+info: Default value for BTDM_BLE_CHAN_ASS_EN in sdkconfig is y but it is n according to Kconfig.
+Using default value from sdkconfig (y).
+info: Default value for BTDM_BLE_PING_EN in sdkconfig is y but it is n according to Kconfig.
+Using default value from sdkconfig (y).
+info: Default value for BTDM_CTRL_HLI in sdkconfig is y but it is n according to Kconfig.
+Using default value from sdkconfig (y).
+info: Default value for ESP_COEX_SW_COEXIST_ENABLE in sdkconfig is y but it is n according to Kconfig.
+Using default value from sdkconfig (y).
+Configuration Report                     
+ ─────────────────────────────────────── 
+   Parser Version: 1                     
+   Verbosity: default                    
+   Status: Finished with notifications   
+                                         
+ ─────────────────────────────────────── 
