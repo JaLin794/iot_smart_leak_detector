@@ -11,6 +11,8 @@ The device currently does not work well as it has not yet been fine tune/calibra
 
 A liquid level sensor did not function very accurately via cyclic tests of dipping and removing the sensor from a body of water. The surface material of the sensor seems to be very hydrophobic and does not perform reliably. 
 
+To increase the battery life of the device, implementation of deep sleep can be used to reduce the current draw of the overall device. The logic of this is to collect data samples every few minutes, perform leak detection logic, connect to wifi and upload to MQTT cloud only if leak detection true. To keep the user well aware of the state of the device, periodic wifi connection and uploading to MQTT for status updates can be done. 
+
 # ESP32 Leak Detector with WiFi and MQTT
 
 This project implements a leak detection system using an ESP32 microcontroller that connects to WiFi via WiFi Provisioning and publishes sensor data to an MQTT broker (HiveMQ Cloud)
@@ -51,7 +53,7 @@ The current values are:
 The ESP32 publishes leak detection data in JSON format to the MQTT topic:
 ```json
 {
-  "voltage": 1750mV,
+  "voltage": 1750mV
   "full_tank": true
   "leak_detected": false
   "flush_detected": false
@@ -80,7 +82,9 @@ The ESP32 publishes leak detection data in JSON format to the MQTT topic:
 5. Once connected, it will start publishing sensor data every 5 seconds
 6. Monitor the serial output for connection status and published data
 
-Note: If previously connected, the ESP32 will automatically connect to wifi. Upon 5 failed attempts, the ESP32 will need to be re-provisioned.
+Note: If previously connected, the ESP32 will automatically connect to wifi. Upon 5 failed attempts, the ESP32 will need to be re-provisioned. 
+
+GPIO35 is used for this project.
 
 ## Dependencies
 
