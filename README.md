@@ -51,8 +51,10 @@ The current values are:
 The ESP32 publishes leak detection data in JSON format to the MQTT topic:
 ```json
 {
-  "voltage": 2.5,
+  "voltage": 1750mV,
+  "full_tank": true
   "leak_detected": false
+  "flush_detected": false
 }
 ```
 
